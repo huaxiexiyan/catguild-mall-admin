@@ -75,6 +75,9 @@ export const useUserStore = defineStore('user', {
       this.token = '';
       this.userInfo = { ...InitUserInfo };
     },
+    async loadToken(catToken: string) {
+      this.token = catToken;
+    },
   },
   persist: {
     afterRestore: () => {
